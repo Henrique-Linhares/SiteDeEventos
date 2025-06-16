@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechCommunity</title>
-    <script src="js/eventos.js" defer></script>
+    <script type="module" src="./js/eventos.js"></script>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="css/eventos.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 </head>
+
 <body>
-    <h1>Eventos Cadastrados</h1>
-    <ul id="listaEventos">
-    </ul>
+    <header class="menu">
+        <h1 id="title-header">TechCommunity</h1>
+        <nav class="menu-nav">
+            <ul class="list-header">
+                <li><a href="index.html" class="link">Home</a></li>
+                <li><a href="#" class="link">Detalhes</a></li>
+                <li><a href="eventos.html" class="link">Lista de Eventos</a></li>
+                <li><a href="sobre.html" class="link">Sobre nós</a></li>
+                <li><a href="#" class="link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="main-title">Eventos Cadastrados</h1>
+
+    <div class="listaEventos" id="listaEventos"></div>
 </body>
+
 </html>
