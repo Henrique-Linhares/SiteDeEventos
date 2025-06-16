@@ -5,77 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabalho Final</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css">
   </head>
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
     rel="stylesheet"
   />
   <body>
-    <header>
-      <nav>
-        <div class="title" style="margin-right: 5px">
-          <h1 style="color: white; font-family: 'Orbitron', sans-serif">
-            TechCommmunity
-          </h1>
-        </div>
-        <div class="itens" style="gap: 20px">
-          <a href="index.html" class="tooltip">
-            <img src="img/home1.png" alt="" />
-            <span class="texttip" 
-              >Home</span
-            >
-          </a>
-          <a href="#" class="tooltip">
-            <img src="images/menu.png" alt="" />
-            <span class="texttip" 
-              >Menu</span
-            >
-          </a>
-          <a href="#" class="tooltip">
-            <img src="img/seila.png" alt="" />
-            <span
-              class="textip-detalhes"
-              >Ver detalhes</span
-            >
-          </a>
-          <a href="cadastrar-evento.html" class="tooltip">
-            <img src="img/sla.png" alt="" />
-            <span
-              class="texttip-evento"
-              
-              >Cadastro de evento</span
-            >
-          </a>
-        </div>
-        <div class="cadastro">
-    >
-            Seja bem vindo
-          </p>
-          <a href="#" class="tooltip">
-            <img src="img/cadastro.png" />
-            <span
-              class="texttip"
-              >Usuário</span
-            >
-          </a>
-        </div>
+    <header class="menu">
+      <h1 id="title-header">TechCommunity</h1>
+      <nav class="menu-nav">
+        <ul class="list-header">
+          <li><a href="index.html" class="link"><i class="fa-solid fa-house fa-xl" style="color: #ffffff;"></i></li>
+          <li><a href="cadastrar-evento.html" class="link"><i class="fa-brands fa-wpforms fa-xl" style="color: #ffffff;"></i></a></li>
+          <li><a href="eventos.html" class="link"><i class="fa-solid fa-list-ul fa-xl" style="color: #ffffff;"></i></a></li>
+          <li><a href="sobre.html" class="link"><i class="fa-solid fa-circle-info fa-xl" style="color: #ffffff;"></i></a></li>
+          <li><a href="contato.html" class="link"><i class="fa-solid fa-headset fa-xl" style="color: #ffffff;"></i></a></li>
+        </ul>
       </nav>
     </header>
-    <main>
-      <article class="eventos">
-        <div class="titulo">
-          <h1 >
-            Eventos
-          </h1>
-        </div>
-        <div class="eventos2"></div>
-      </article>
-    </main>
-    <footer>
+    <footer class="footer">
       <p>Todos os direitos reservado a TechCommmunity ©</p>
     </footer>
   </body>
