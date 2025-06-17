@@ -51,33 +51,6 @@ A **TechCommunity** é uma organização local vibrante e em crescimento. Inicia
 - Botão "Voltar ao Topo" com rolagem suave.
 - Navegação com parâmetros de URL (`?id=123`) para detalhes dinâmicos.
 
----
-
-## 📦 Organização dos Arquivos
-TechCommunity/
-│
-├── index.html
-├── eventos.html
-├── detalhes-evento.html
-├── cadastrar-evento.html
-├── sobre.html
-├── contato.html
-│
-├── css/
-│ ├── global.css
-│ └── sobre.css
-│
-├── js/
-│ ├── events-data.js
-│ ├── main.js
-│ ├── cadastrar.js
-│ ├── detalhes.js
-│ └── inscricao.js
-│
-└── assets/
-└── imagens/
-
-
 ## 🧠 Objetivos de Aprendizado
 
 Com esse projeto, aprofundamos conhecimentos em:
