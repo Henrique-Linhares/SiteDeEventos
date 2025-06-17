@@ -54,4 +54,45 @@ A **TechCommunity** é uma organização local vibrante e em crescimento. Inicia
 ---
 
 ## 📦 Organização dos Arquivos
+TechCommunity/
+│
+├── index.html
+├── eventos.html
+├── detalhes-evento.html
+├── cadastrar-evento.html
+├── sobre.html
+├── contato.html
+│
+├── css/
+│ ├── global.css
+│ └── sobre.css
+│
+├── js/
+│ ├── events-data.js
+│ ├── main.js
+│ ├── cadastrar.js
+│ ├── detalhes.js
+│ └── inscricao.js
+│
+└── assets/
+└── imagens/
 
+
+## 🧠 Objetivos de Aprendizado
+
+Com esse projeto, aprofundamos conhecimentos em:
+
+- 📌 Manipulação de dados no `localStorage`;
+- 📌 Criação de formulários completos e funcionais com validações;
+- 📌 Modularização de código JS usando `import/export`;
+- 📌 Desenvolvimento de páginas com conteúdo dinâmico e atualizado;
+- 📌 Experiência do Usuário (UX) com foco em usabilidade e design adaptativo;
+- 📌 Resolução de problemas reais e aplicação de lógica prática no front-end.
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+1. Clone este repositório:
+```bash
+git clone https://github.com/seu-usuario/techcommunity.git
