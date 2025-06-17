@@ -69,3 +69,32 @@ button:hover {
 .footer p {
     padding-top: 30px;
 }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .form-contato label {
+      font-size: 14px;
+    }
+  
+    .form-contato input,
+    .form-contato textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 15px;
+      padding: 10px;
+    }
+}
