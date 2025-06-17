@@ -1,0 +1,107 @@
+body {
+  background-color: #343a40;
+  justify-items: center;
+}
+
+.bem-vindo {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: #ffffff;
+  padding: 20px 0;
+  margin: 40px auto 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.bem-vindo:hover {
+  transform: scale(1.02);
+}
+
+.eventos-title {
+  position: relative;
+  margin: 60px auto 40px;         
+  padding: 14px 28px 14px 48px;   
+  width: 90%;
+  max-width: 780px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  text-align: center;              
+  color: #ffffff;
+  backdrop-filter: blur(6px);            
+  border-radius: 12px;
+  overflow: hidden;             
+  transition: transform 0.25s ease;
+}
+
+.eventos-title:hover {
+  transform: translateY(-4px);   
+}
+
+.eventos-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+}
+
+.listaEventos {
+  width: 90%;
+  height: 80%;
+  max-width: 90%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border-radius: 20px;
+  background-color: #343a40;
+  padding-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+
+
+  .card-evento {
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 300px;
+      min-width: 300px;
+      height: 100%;
+      padding: 15px;
+      gap: 20px;
+      border-radius: 20px;
+
+      box-shadow: 5px 6px rgba(0, 0, 0, 0.079);
+
+      .titulo-evento {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+      }
+
+      button {
+          width: 100%;
+          height: 30px;
+          background-color: rgb(190, 185, 185);
+          border-radius: 20px;
+          border: none;
+          cursor: pointer;
+      }
+  }
+}
