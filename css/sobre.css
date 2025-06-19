@@ -87,3 +87,52 @@ body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-container {
+      margin: 20px 10px;
+      padding: 15px;
+    }
+  
+    .sobre-container h2 {
+      font-size: 2em;
+    }
+  
+    .sobre-container p {
+      font-size: 1em;
+    }
+  
+    .missao-visao {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    .card h3 {
+      font-size: 1.3em;
+    }
+  
+    .equipe h3 {
+      font-size: 1.4em;
+    }
+  
+    .membros {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .membro img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .membro p {
+      font-size: 0.95em;
+    }
+}

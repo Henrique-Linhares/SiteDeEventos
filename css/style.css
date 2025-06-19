@@ -105,3 +105,28 @@ body {
       }
   }
 }
+
+@media (max-width: 768px) {
+  .bem-vindo, .eventos-title {
+    font-size: 1.8rem;
+    padding: 12px 10px;
+    width: 95%;
+  }
+
+  .eventos-title {
+    padding: 10px 20px;
+  }
+
+  .listaEventos {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+    gap: 15px;
+  }
+
+  .listaEventos .card-evento {
+    width: 90%;
+    min-width: unset;
+  }
+
+}

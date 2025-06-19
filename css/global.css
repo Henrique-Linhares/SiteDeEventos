@@ -87,6 +87,43 @@
   transition: transform 0.4s ease-out; 
 }
 
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  #title-header {
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .menu-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .list-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .list-header li {
+    padding: 10px;
+  }
+
+  .list-header li a i {
+    font-size: 20px;
+  }
+}
 
 
 
