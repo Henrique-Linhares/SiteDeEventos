@@ -1,7 +1,7 @@
 import { dataEventos } from './events-data.js';
 
 const listaEventos = document.getElementById("listaEventos");
-let dados = JSON.parse(localStorage.getItem("eventos")) || [];  
+let dados = JSON.parse(localStorage.getItem("eventos")) || [];
 
 if (dados.length === 0) {
     dados = dataEventos;
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if (item.image) {
             const imagem = document.createElement("img");
-            imagem.src = item.image; 
+            imagem.src = item.image;
             imagem.alt = item.title;
             imagem.style.width = "100%";
             imagem.style.height = "150px";
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         titulo.textContent = item.title;
         titulo.classList.add("titulo-evento")
 
-        const date = new Date(item.date); 
+        const date = new Date(item.date);
 
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -51,7 +51,12 @@ window.addEventListener("DOMContentLoaded", () => {
         buttonDetalhes.textContent = `Ver mais`;
         card.classList.add("buttonDetalhes");
 
-     
+        buttonDetalhes.addEventListener("click", () => {
+            localStorage.setItem("eventoSelecionadoId", item.id);
+            window.location.href = "detalhes.html";
+        });
+
+
         card.appendChild(titulo);
         card.appendChild(hora);
         card.appendChild(data);
@@ -60,5 +65,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         listaEventos.appendChild(card);
     });
+
+
 
 })

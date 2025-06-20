@@ -6,6 +6,7 @@ const localizacao = document.getElementById("localizacao");
 const descricao = document.getElementById("descricao");
 const selectCategorias = document.getElementById("selectCategorias");
 const imagem = document.getElementById("image");
+let contador = 1;
 
 function validarTitulo() {
   if (titulo.value.length < 3) {
@@ -61,12 +62,13 @@ function validarCategoria() {
 
 function dadosEventos() {
   const dados = {
+    id: Date.now().toString(), 
     title: titulo.value,
-    data: data.value,
-    hora: hora.value,
-    localizacao: localizacao.value,
-    descricao: descricao.value,
-    categoria: descricao.value,
+    date: data.value,
+    time: hora.value,
+    location: localizacao.value,
+    description: descricao.value,
+    category: selectCategorias.value,
     image: imagem.value,
   };
 
@@ -74,22 +76,23 @@ function dadosEventos() {
   listaEventos.push(dados);
 
   localStorage.setItem("eventos", JSON.stringify(listaEventos));
+  contador++
 }
 
 formCadastro.addEventListener("submit", (event) => {
-    const validacoes = [
-        validarTitulo(),
-        validarHora(),
-        validarLocalizacao(),
-        validarDescricao(),
-        validarCategoria(),
-    ];
+  const validacoes = [
+    validarTitulo(),
+    validarHora(),
+    validarLocalizacao(),
+    validarDescricao(),
+    validarCategoria(),
+  ];
 
-    if (validacoes.includes(false)) {
-        event.preventDefault();
-        alert("Por favor, preencha todos os campos corretamente.");
-        return;
-    }
+  if (validacoes.includes(false)) {
+    event.preventDefault();
+    alert("Por favor, preencha todos os campos corretamente.");
+    return;
+  }
   event.preventDefault();
   dadosEventos();
   window.location.href = "./eventos.html";

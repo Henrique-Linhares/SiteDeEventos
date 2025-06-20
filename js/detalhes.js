@@ -1,48 +1,34 @@
+import { dataEventos } from './events-data.js';
 
-    const card = document.createElement("div");
-    card.classList.add("content-evento")
+document.addEventListener('DOMContentLoaded', () => {
+    const eventos = JSON.parse(localStorage.getItem("eventos")) || dataEventos;
+    const idSelecionado = localStorage.getItem("eventoSelecionadoId");
 
-    if (item.image) {
-        const imagem = document.createElement("img");
-        imagem.src = item.image;
-        imagem.alt = item.title;
-        imagem.style.width = "100%";
-        imagem.style.height = "150px";
-        imagem.style.objectFit = "cover";
-        imagem.style.borderRadius = "10px";
-        card.appendChild(imagem);
+    const evento = eventos.find(e => e.id === idSelecionado);
+
+    if (!evento) {
+        document.body.innerHTML = "<h2 style='color:white; text-align:center; margin-top:2rem;'>Evento não encontrado.</h2>";
+        return;
     }
 
-    const titulo = document.createElement("h1");
-    titulo.textContent = item.title;
-    titulo.classList.add("titulo-evento")
+    document.getElementById('evento-titulo').textContent = evento.title;
+    document.getElementById('evento-data').textContent = formatarData(evento.date);
+    document.getElementById('evento-horario').textContent = evento.time;
+    document.getElementById('evento-local').textContent = evento.location;
+    document.getElementById('evento-descricao').textContent = evento.description;
+    document.getElementById('evento-categoria').textContent = evento.category;
+    document.getElementById('evento-imagem').src = evento.image;
+});
 
-    const date = new Date(item.date);
+function formatarData(dataISO) {
+    const data = new Date(dataISO);
+    return data.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    });
+}
 
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
-
-    const formattedDate = `${day}/${month}/${year}`;
-
-    const data = document.createElement("p");
-    data.textContent = `Data: ${formattedDate}`;
-
-    const hora = document.createElement("p");
-    hora.textContent = `Hora: ${item.time}`; XMLDocument
-
-    const local = document.createElement("p");
-    local.textContent = `Local: ${item.location}`;
-
-    const buttonDetalhes = document.createElement("button");
-    buttonDetalhes.textContent = `Ver mais`;
-    card.classList.add("buttonDetalhes");
-
-
-    card.appendChild(titulo);
-    card.appendChild(hora);
-    card.appendChild(data);
-    card.appendChild(local);
-    card.appendChild(buttonDetalhes);
-
-    listaEventos.appendChild(card);
+document.getElementById("botao-voltar").addEventListener("click", () => {
+  window.location.href = "eventos.html"; // ou a página correta da lista
+});
